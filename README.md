@@ -1,4 +1,6 @@
-# meet
+<h1 style=bold>Meet App</h1>
+<p>This is an app built using React on the frontend, and AWS Lambda on the backend. It displays a list of events, which is fetching the events from Google Calendar API, that can be filtered by city or number of events.</p>
+
 User Stories:<br />
 
 Show/Hide Event Details<br />
