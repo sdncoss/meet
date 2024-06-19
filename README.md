@@ -1,7 +1,7 @@
 <h1 style=bold>Meet App</h1>
 <p>This is an app built using React on the frontend, and AWS Lambda on the backend. It displays a list of events, which is fetching the events from Google Calendar API, that can be filtered by city or number of events.</p>
 
-User Stories:<br />
+<h2 style=bold>User Stories:</h2><br />
 
 Show/Hide Event Details<br />
 An event element is collapsed by default.<br />
@@ -101,3 +101,6 @@ Feature: Display Charts Visualizing Event Details<br />
     Given I am on the events page<br />
     When the chart is loaded<br />
     Then I should see a chart displaying the number of upcoming events in each city
+
+<h2 style=bold>Use of Serverless Function</h2><br />
+<p>serverless functions will be used to handle backend logic and data processing tasks efficiently without the need to manage server infrastructure. For example, we can use serverless functions to Fetch Event Data, Cache Data, Analytics, User Management. By using serverless functions, we can scale these operations automatically based on demand, reduce operational costs, and focus on developing core features.</p>
