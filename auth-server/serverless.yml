@@ -11,7 +11,7 @@ provider:
   environment: 
     CLIENT_ID: ${file(config.json):CLIENT_ID}
     CLIENT_SECRET: ${file(config.json):CLIENT_SECRET}
-    CALENDAR_ID: ${file(config.json)CALENDAR_ID}
+    CALENDAR_ID: ${file(config.json):CALENDAR_ID}
 
 functions:
   getAuthURL:
@@ -19,4 +19,10 @@ functions:
     events:
       - http:
           path: api/get-auth-url
+          method: get
+  getAccessToken:
+    handler: handler.getAccessToken
+    events:
+      - http:
+          path: api/token/{code}
           method: get
