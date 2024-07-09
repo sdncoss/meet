@@ -93,4 +93,5 @@ input[type="number"] {
   outline: none;
   cursor: pointer;
   background-color: #567D89;
+  color: white;
 }
