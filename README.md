@@ -53,13 +53,13 @@ Feature: Show/Hide Event Details<br />
     When the events are loaded<br />
     Then I should see all event details collapsed by default<br />
 
-Feature: Show/Hide Event Details<br />
+
   Scenario: User can expand an event to see details<br />
     Given I am on the events page<br />
     When I click on an event<br />
     Then I should see the event details expanded<br />
 
-Feature: Show/Hide Event Details<br />
+
   Scenario: User can collapse an event to hide details<br />
     Given an event is expanded<br />
     When I click on the expanded event<br />
@@ -72,7 +72,7 @@ Feature: Specify Number of Events<br />
     When the events are loaded<br />
     Then I should see 32 events displayed by default<br />
 
-Feature: Specify Number of Events<br />
+
   Scenario: User can change the number of events displayed<br />
     Given I am on the events page<br />
     When I specify a number of events to display<br />
@@ -84,7 +84,7 @@ Feature: Use the App When Offline<br />
     When I open the app<br />
     Then I should see cached data from my previous session<br />
 
-Feature: Use the App When Offline<br />
+
   Scenario: Show error when user changes search settings<br />
     Given I am offline<br />
     When I try to change the search settings<br />
