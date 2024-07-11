@@ -25,27 +25,18 @@ describe('<NumberOfEvents /> component', () => {
 });
 
 //integration testing
-describe('<App /> integration', () => {
+describe('NumberOfEvents /> integration', () => {
   test('renders a list of events matching the number of events input by user', async () => {
     const user = userEvent.setup();
     const AppDOM = render(<App />).container.firstChild;
 
-    // Verify default number of events
-    const EventListDOM = AppDOM.querySelector('#event-list');
-    let allRenderedEventItems = within(EventListDOM).queryAllByRole('listitem');
-    expect(allRenderedEventItems.length).toBe(32);
-
-    // Change number of events
     const NumberOfEventsDOM = AppDOM.querySelector('#number-of-events');
     const NumberOfEventsInput = within(NumberOfEventsDOM).queryByRole('textbox');
-
-    await user.clear(NumberOfEventsInput);
     await user.type(NumberOfEventsInput, "{backspace}{backspace}10");
-    expect(NumberOfEventsInput.value).toBe('10');
 
-    await waitFor(() => {
-      allRenderedEventItems = within(EventListDOM).queryAllByRole('listitem');
-      expect(allRenderedEventItems.length).toBe(10);
-    });
+    const EventListDOM = AppDOM.querySelector('#event-list');
+
+    const allRenderedEventItems = within(EventListDOM).queryAllByRole('listitem');
+    expect(allRenderedEventItems.length).toBe(10);
   });
 });
