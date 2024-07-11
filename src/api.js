@@ -33,6 +33,7 @@ const getToken = async (code) => {
 //this function will fetch list of all events
 export const getEvents = async () => {
   if (window.location.href.startsWith('http://localhost')) {
+    //NProgress.done();
     return mockData;
   }
   const token = await getAccessToken();
