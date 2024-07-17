@@ -84,6 +84,14 @@ input[type="number"] {
   position: relative;
 }
 
+.alerts-container {
+  position: fixed;
+  top: 0px;
+  left: 20px;
+  width: 250px;
+  z-index: 1000;
+}
+
 .details-btn {
   position: absolute;
   right: 5px;
