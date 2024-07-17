@@ -37,7 +37,6 @@ defineFeature(feature, test => {
 
       when('user specifys a number of events to display', async () => {
         const user = userEvent.setup();
-        AppComponent = render(<App />);
         const AppDOM = AppComponent.container.firstChild;
         const NumberOfEventsDOM = AppDOM.querySelector('#number-of-events');
         const numberOfEventsInput = within(NumberOfEventsDOM).queryByRole('textbox');

@@ -1,16 +1,20 @@
 import { useState, useEffect } from 'react';
 
-const NumberOfEvents = ({ currentNOE, setCurrentNOE }) => {
+const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
   const [number, setNumber] = useState(32);
 
-  useEffect(() => {
-    setNumber(currentNOE);
-  }, [`${currentNOE}`]);
-
   const handleInputChange = (event) => {
-    const value = parseInt(event.target.value, 10);
+    const value = event.target.value;
     setNumber(value);
     setCurrentNOE(value);
+
+    let errorText;
+    if (value <= 0 || isNaN(value) || value > 100) {
+      errorText = "Invalid number. Please use a number between 1 & 100.";
+    } else {
+      errorText = ""
+    }
+    setErrorAlert(errorText);
   };
 
   return (
@@ -19,7 +23,6 @@ const NumberOfEvents = ({ currentNOE, setCurrentNOE }) => {
         type="number"
         className="number-events"
         value={number}
-        placeholder="10"
         onChange={handleInputChange}
         role="textbox"
       />
