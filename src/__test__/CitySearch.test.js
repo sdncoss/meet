@@ -55,6 +55,7 @@ describe('<CitySearch /> component', () => {
     }
   });
 
+
   test('renders the suggestion text in the textbox upon clicking on the suggeston', async () => {
     const user = userEvent.setup();
     const allEvents = await getEvents();
