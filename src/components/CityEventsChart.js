@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { getEvents } from '../api';
 import {
   ScatterChart,
   Scatter,
@@ -36,7 +35,7 @@ const CityEventsChart = ({ allLocations, events }) => {
       >
         <CartesianGrid />
         <XAxis type="catagory" dataKey="city" name="City" />
-        <YAxis type="number" dataKey="count" name="Number of Events" allowDecimals={false} />
+        <YAxis type="number" dataKey="count" name="Number of Events" />
         <Tooltip cursor={{ strokeDasharray: '3 3' }} />
         <Scatter name="A school" data={data} fill="#567D89" />
       </ScatterChart>
