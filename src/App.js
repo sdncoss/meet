@@ -49,8 +49,8 @@ const App = () => {
       <h3>Number of Events:</h3>
       <NumberOfEvents currentNOE={currentNOE} setCurrentNOE={setCurrentNOE} setErrorAlert={setErrorAlert} />
       <div className="charts-container">
-        <CityEventsChart allLocations={allLocations} events={events} />
         <EventGenresChart events={events} />
+        <CityEventsChart allLocations={allLocations} events={events} />
       </div>
       <EventList events={events} />
     </div>

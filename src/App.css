@@ -95,6 +95,7 @@ input[type="number"] {
 .charts-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  color:rgba(0, 0, 0, 0.75);
 }
 
 @media (max-width: 768px) {

@@ -1,12 +1,5 @@
 import { useState, useEffect } from 'react';
-import {
-  ScatterChart,
-  Scatter,
-  XAxis, YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer
-} from 'recharts';
+import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 const CityEventsChart = ({ allLocations, events }) => {
   const [data, setData] = useState([]);
@@ -18,7 +11,7 @@ const CityEventsChart = ({ allLocations, events }) => {
   const getData = () => {
     const data = allLocations.map((location) => {
       const count = events.filter((event) => event.location === location).length
-      const city = location.split(/, | - /)[0]
+      const city = location.split((/, | - /))[0]
       return { city, count };
     })
     return data;
@@ -38,11 +31,11 @@ const CityEventsChart = ({ allLocations, events }) => {
         <CartesianGrid />
         <XAxis
           type="category" dataKey="city" name="City"
-          angle={60} interval={0} tick={{ dx: 20, dy: 40, fontSize: 14 }}
+          angle={60} interval={0} tick={{ dx: 20, dy: 40, fontSize: 14, fill: 'white' }} fill="white"
         />
-        <YAxis type="number" dataKey="count" name="number of events" allowDecimals={false} />
+        <YAxis type="number" dataKey="count" name="Number of Events" tick={{ fontSize: 14, fill: 'black' }} allowDecimals={false} />
         <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-        <Scatter name="A school" data={data} fill="#8884d8" />
+        <Scatter name="A school" data={data} fill="#567D89" />
       </ScatterChart>
     </ResponsiveContainer>
   );

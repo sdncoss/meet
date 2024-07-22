@@ -11,7 +11,8 @@ const MESSAGES_TO_IGNORE = [
   "The above error occurred",
   "Warning:",
   "`ReactDOMTestUtils.act` is deprecated in favor of `React.act`",
-  "One of your dependencies, babel-preset-react-app"
+  "One of your dependencies, babel-preset-react-app",
+  "babel-preset-react-app is part of the create-react-app project"
 ];
 
 const originalError = console.error.bind(console.error);
