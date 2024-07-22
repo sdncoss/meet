@@ -17,6 +17,7 @@ const EventGenreChart = ({ events }) => {
     return data;
   };
 
+
   useEffect(() => {
     setData(getData());
   }, [`${events}`]);

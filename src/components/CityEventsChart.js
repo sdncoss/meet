@@ -24,6 +24,7 @@ const CityEventsChart = ({ allLocations, events }) => {
     return data;
   };
 
+
   return (
     <ResponsiveContainer width="99%" height={400}>
       <ScatterChart
