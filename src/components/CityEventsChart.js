@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { getEvents } from '../api';
 import {
   ScatterChart,
   Scatter,
