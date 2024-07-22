@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import mockData from '../mock-data';
 
 const Event = ({ event }) => {
   const [showDetails, setShowDetails] = useState(false);
