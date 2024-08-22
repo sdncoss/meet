@@ -84,22 +84,22 @@ User Story:
     * Then I should see cached data from my previous session
 
 
-  Scenario: Show error when user changes search settings<br />
-    Given I am offline<br />
-    When I try to change the search settings<br />
-    Then I should see an error message indicating that the action cannot be completed<br />
+  * **Scenario**: Show error when user changes search settings
+    * Given I am offline
+    * When I try to change the search settings
+    * Then I should see an error message indicating that the action cannot be completed
 
-Feature: Add an App Shortcut to the Home Screen<br />
-  Scenario: User can install the meet app as a shortcut on their device home screen<br />
-    Given I am using the app<br />
-    When I choose to add a shortcut to my home screen<br />
-    Then the meet app should be installed as a shortcut on my device home screen<br />
+### Feature: Add an App Shortcut to the Home Screen
+  * **Scenario**: User can install the meet app as a shortcut on their device home screen
+    * Given I am using the app
+    * When I choose to add a shortcut to my home screen
+    * Then the meet app should be installed as a shortcut on my device home screen
 
-Feature: Display Charts Visualizing Event Details<br />
-  Scenario: Show a chart with the number of upcoming events in each city<br />
-    Given I am on the events page<br />
-    When the chart is loaded<br />
-    Then I should see a chart displaying the number of upcoming events in each city
+### Feature: Display Charts Visualizing Event Details
+  * **Scenario**: Show a chart with the number of upcoming events in each city
+    * Given I am on the events page
+    * When the chart is loaded
+    * Then I should see a chart displaying the number of upcoming events in each city
 
-<h2 style=bold>Use of Serverless Function</h2><br />
-<p>serverless functions will be used to handle backend logic and data processing tasks efficiently without the need to manage server infrastructure. For example, we can use serverless functions to Fetch Event Data, Cache Data, Analytics, User Management. By using serverless functions, we can scale these operations automatically based on demand, reduce operational costs, and focus on developing core features.</p>
+## Use of Serverless Function
+Serverless functions will be used to handle backend logic and data processing tasks efficiently without the need to manage server infrastructure. For example, we can use serverless functions to Fetch Event Data, Cache Data, Analytics, User Management. By using serverless functions, we can scale these operations automatically based on demand, reduce operational costs, and focus on developing core features.
