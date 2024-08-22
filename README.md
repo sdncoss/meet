@@ -1,57 +1,56 @@
-<h1 style=bold>Meet App</h1>
-<p>This is an app built using React on the frontend, and AWS Lambda on the backend. It displays a list of events, which is fetching the events from Google Calendar API, that can be filtered by city or number of events.</p>
+# Meet App
+This is an app built using React on the frontend, and AWS Lambda on the backend. It displays a list of events, which is fetching the events from Google Calendar API, that can be filtered by city or number of events.
 
-<h2 style=bold>User Stories:</h2><br />
+## User Stories:
 
-Show/Hide Event Details<br />
-An event element is collapsed by default.<br />
-User Story:<br />
-As a user, I should see event details collapsed by default, so that I can have a clean and uncluttered view of the events list.
+### Show/Hide Event Details
+#### An event element is collapsed by default.
+User Story:
+* As a user, I should see event details collapsed by default, so that I can have a clean and uncluttered view of the events list.
+#### User can expand an event to see details.
+User Story:
+* As a user, I should be able to expand an event to see its details, so that I can view more information about a specific event when needed.
 
-User can expand an event to see details.<br />
-User Story:<br />
-As a user, I should be able to expand an event to see its details, so that I can view more information about a specific event when needed.
+#### User can collapse an event to hide details.
+User Story:
+* As a user, I should be able to collapse an event to hide its details, so that I can reduce clutter and easily navigate through other events.
 
-User can collapse an event to hide details.<br />
-User Story:<br />
-As a user, I should be able to collapse an event to hide its details, so that I can reduce clutter and easily navigate through other events.
+### Specify Number of Events
+#### When user hasn’t specified a number, 32 events are shown by default.
+User Story:
+* As a user, I should see 32 events displayed by default if I haven’t specified a number, so that I have a sufficient number of events to browse initially.
 
-Specify Number of Events<br />
-When user hasn’t specified a number, 32 events are shown by default.<br />
-User Story:<br />
-As a user, I should see 32 events displayed by default if I haven’t specified a number, so that I have a sufficient number of events to browse initially.
+#### User can change the number of events displayed.
+User Story:
+* As a user, I should be able to change the number of events displayed, so that I can control the amount of information I see based on my preference.
 
-User can change the number of events displayed.<br />
-User Story:<br />
-As a user, I should be able to change the number of events displayed, so that I can control the amount of information I see based on my preference.
+### Use the App When Offline
+#### Show cached data when there’s no internet connection.
+User Story:
+* As a user, I should be able to see cached data when there is no internet connection, so that I can still access previously viewed events and information offline.
 
-Use the App When Offline<br />
-Show cached data when there’s no internet connection.<br />
-User Story:<br />
-As a user, I should be able to see cached data when there is no internet connection, so that I can still access previously viewed events and information offline.
+#### Show error when user changes search settings (city, number of events).
+User Story:
+* As a user, I should see an error message if I change search settings without an internet connection, so that I understand why the app cannot fulfill my request.
 
-Show error when user changes search settings (city, number of events).<br />
-User Story:<br />
-As a user, I should see an error message if I change search settings without an internet connection, so that I understand why the app cannot fulfill my request.
+### Add an App Shortcut to the Home Screen
+#### User can install the meet app as a shortcut on their device home screen.
+User Story:
+* As a user, I should be able to install the meet app as a shortcut on my device home screen, so that I can quickly access the app with a single tap.
 
-Add an App Shortcut to the Home Screen<br />
-User can install the meet app as a shortcut on their device home screen.<br />
-User Story:<br />
-As a user, I should be able to install the meet app as a shortcut on my device home screen, so that I can quickly access the app with a single tap.
-
-Display Charts Visualizing Event Details<br />
-Show a chart with the number of upcoming events in each city.<br />
-User Story:<br />
-As a user, I should be able to see a chart displaying the number of upcoming events in each city, so that I can easily understand the distribution of events across different locations.
+### Display Charts Visualizing Event Details
+#### Show a chart with the number of upcoming events in each city.
+User Story:
+* As a user, I should be able to see a chart displaying the number of upcoming events in each city, so that I can easily understand the distribution of events across different locations.
 
 
-Gherkin Feature Scenarios:<br />
+## Gherkin Feature Scenarios:
 
-Feature: Show/Hide Event Details<br />
-  Scenario: An event element is collapsed by default<br />
-    Given I am on the events page<br />
-    When the events are loaded<br />
-    Then I should see all event details collapsed by default<br />
+* **Feature**: Show/Hide Event Details
+  **Scenario**: An event element is collapsed by default
+    * Given I am on the events page
+    *  When the events are loaded
+    * Then I should see all event details collapsed by default
 
 
   Scenario: User can expand an event to see details<br />
