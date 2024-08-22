@@ -46,42 +46,42 @@ User Story:
 
 ## Gherkin Feature Scenarios:
 
-* **Feature**: Show/Hide Event Details
-  **Scenario**: An event element is collapsed by default
+### Feature: Show/Hide Event Details
+  * **Scenario**: An event element is collapsed by default
     * Given I am on the events page
     *  When the events are loaded
     * Then I should see all event details collapsed by default
 
 
-  Scenario: User can expand an event to see details<br />
-    Given I am on the events page<br />
-    When I click on an event<br />
-    Then I should see the event details expanded<br />
+  * **Scenario**: User can expand an event to see details
+    * Given I am on the events page
+    * When I click on an event
+    * Then I should see the event details expanded
 
 
-  Scenario: User can collapse an event to hide details<br />
-    Given an event is expanded<br />
-    When I click on the expanded event<br />
-    Then the event details should collapse<br />
+  * **Scenario**: User can collapse an event to hide details
+    * Given an event is expanded
+    * When I click on the expanded event
+    * Then the event details should collapse
 
-Feature: Specify Number of Events<br />
-  Scenario: When user hasn’t specified a number, 32 events are shown by default<br />
-    Given I am on the events page<br />
-    And I haven’t specified the number of events to display
-    When the events are loaded<br />
-    Then I should see 32 events displayed by default<br />
+### Feature: Specify Number of Events
+  * **Scenario**: When user hasn’t specified a number, 32 events are shown by default
+    * Given I am on the events page
+    * And I haven’t specified the number of events to display
+    * When the events are loaded
+    * Then I should see 32 events displayed by default
 
 
-  Scenario: User can change the number of events displayed<br />
-    Given I am on the events page<br />
-    When I specify a number of events to display<br />
-    Then I should see the specified number of events displayed<br />
+  * **Scenario**: User can change the number of events displayed
+    * Given I am on the events page
+    * When I specify a number of events to display
+    * Then I should see the specified number of events displayed
 
-Feature: Use the App When Offline<br />
-  Scenario: Show cached data when there’s no internet connection<br />
-    Given I am offline<br />
-    When I open the app<br />
-    Then I should see cached data from my previous session<br />
+### Feature: Use the App When Offline
+  * **Scenario**: Show cached data when there’s no internet connection
+    * Given I am offline
+    * When I open the app
+    * Then I should see cached data from my previous session
 
 
   Scenario: Show error when user changes search settings<br />
